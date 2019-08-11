@@ -1,0 +1,19 @@
+{
+  "name": "generatepasswords",
+  "version": "1.0.0",
+  "description": "password generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasAndrewMacLean/generatePasswords.git"
+  },
+  "author": "Thomas MacLean <hello@thomasmaclean.be> (https://thomasmaclean.be)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThomasAndrewMacLean/generatePasswords/issues"
+  },
+  "homepage": "https://github.com/ThomasAndrewMacLean/generatePasswords#readme"
+}
