@@ -150,6 +150,7 @@ const superb = require('superb');
 const badwordsArray = require('badwords/array');
 const placeholder = document.getElementById('password');
 
+console.log('starting 🚀');
 const createPassword = () => {
   const badWord =
     badwordsArray[Math.floor(Math.random() * badwordsArray.length)];
@@ -229,6 +230,10 @@ function copyTextToClipboard(text) {
   navigator.clipboard.writeText(text).then(
     function() {
       console.log('Async: Copying to clipboard was successful!');
+      placeholder.classList.add('copied');
+      setTimeout(() => {
+        placeholder.classList.remove('copied');
+      }, 400);
     },
     function(err) {
       console.error('Async: Could not copy text: ', err);
