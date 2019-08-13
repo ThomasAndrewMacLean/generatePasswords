@@ -148,23 +148,26 @@ module.exports = (minimum, maximum) => {
 },{}],6:[function(require,module,exports){
 const superb = require('superb');
 const badwordsArray = require('badwords/array');
-
-const badWord = badwordsArray[Math.floor(Math.random() * badwordsArray.length)];
-const goodWord = superb.random();
-
-let password =
-randomUpperCase(goodWord) +
-randomString(2, '@*#?!$%') +
-  randomUpperCase(badWord);
-
-password = password.split(' ').join('');
-password = password.split("'").join('');
-password = password.split('"').join('');
-
-password += randomString(3, '0123456789');
-
 const placeholder = document.getElementById('password');
-placeholder.innerHTML = password;
+
+const createPassword = () => {
+  const badWord =
+    badwordsArray[Math.floor(Math.random() * badwordsArray.length)];
+  const goodWord = superb.random();
+
+  let password =
+    randomUpperCase(goodWord) +
+    randomString(2, '@*#?!$%') +
+    randomUpperCase(badWord);
+
+  password = password.split(' ').join('');
+  password = password.split("'").join('');
+  password = password.split('"').join('');
+
+  password += randomString(3, '0123456789');
+
+  placeholder.innerHTML = password;
+};
 
 function randomString(len, charSet) {
   charSet =
@@ -186,5 +189,48 @@ function randomUpperCase(word) {
     })
     .join('');
 }
+
+const button = document.getElementById('btn');
+button.addEventListener('click', () => {
+  copyTextToClipboard(placeholder.innerHTML);
+});
+
+const newPassword = document.getElementById('newPasswordbtn');
+newPassword.addEventListener('click', () => {
+  createPassword();
+});
+
+function fallbackCopyTextToClipboard(text) {
+  var textArea = document.createElement('textarea');
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Fallback: Copying text command was ' + msg);
+  } catch (err) {
+    console.error('Fallback: Oops, unable to copy', err);
+  }
+
+  document.body.removeChild(textArea);
+}
+function copyTextToClipboard(text) {
+  if (!navigator.clipboard) {
+    fallbackCopyTextToClipboard(text);
+    return;
+  }
+  navigator.clipboard.writeText(text).then(
+    function() {
+      console.log('Async: Copying to clipboard was successful!');
+    },
+    function(err) {
+      console.error('Async: Could not copy text: ', err);
+    }
+  );
+}
+createPassword();
 
 },{"badwords/array":1,"superb":2}]},{},[6]);
