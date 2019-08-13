@@ -30,7 +30,8 @@ h1 {
         flex-direction: column;
         width: 90vw;
     }
-    button{
+
+    button {
         margin: 1rem 0;
     }
 }

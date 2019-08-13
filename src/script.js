@@ -2,6 +2,7 @@ const superb = require('superb');
 const badwordsArray = require('badwords/array');
 const placeholder = document.getElementById('password');
 
+console.log('starting 🚀');
 const createPassword = () => {
   const badWord =
     badwordsArray[Math.floor(Math.random() * badwordsArray.length)];
