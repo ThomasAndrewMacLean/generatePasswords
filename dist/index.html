@@ -3,19 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
-    <h1>Random password:</h1>
+    <main>
 
-    <span id="password"></span>
+        <h1>Random password</h1>
 
-    <button id="newPasswordbtn">new</button>
-    <button id="btn">Copy text</button>
+        <span id="password"></span>
+        <div class="button-wrap">
+
+            <button id="newPasswordbtn">New ♻️</button>
+            <button id="btn">Copy to 📋</button>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>

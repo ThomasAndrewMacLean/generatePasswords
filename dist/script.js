@@ -195,6 +195,10 @@ button.addEventListener('click', () => {
   copyTextToClipboard(placeholder.innerHTML);
 });
 
+password.addEventListener('click', () => {
+  copyTextToClipboard(placeholder.innerHTML);
+});
+
 const newPassword = document.getElementById('newPasswordbtn');
 newPassword.addEventListener('click', () => {
   createPassword();
