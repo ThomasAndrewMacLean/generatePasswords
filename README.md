@@ -9,3 +9,7 @@ password generator
 - https://itnext.io/automate-deployment-with-webhooks-18735f1c7f84
 - https://www.quora.com/How-do-you-point-a-tk-domain-name-to-your-own-server
 - http://p4ssw0rd.tk/
+
+## TODO
+
+- add ssl certbot
