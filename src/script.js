@@ -68,6 +68,11 @@ function fallbackCopyTextToClipboard(text) {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Fallback: Copying text command was ' + msg);
+
+    placeholder.classList.add('copied');
+    setTimeout(() => {
+      placeholder.classList.remove('copied');
+    }, 400);
   } catch (err) {
     console.error('Fallback: Oops, unable to copy', err);
   }
