@@ -45,6 +45,13 @@ span {
     margin: 50px 0;
     cursor: pointer;
     text-align: center;
+    transition: border 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+span.copied {
+    border: 4px solid darkgreen;
+
 }
 
 button {

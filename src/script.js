@@ -82,6 +82,10 @@ function copyTextToClipboard(text) {
   navigator.clipboard.writeText(text).then(
     function() {
       console.log('Async: Copying to clipboard was successful!');
+      placeholder.classList.add('copied');
+      setTimeout(() => {
+        placeholder.classList.remove('copied');
+      }, 400);
     },
     function(err) {
       console.error('Async: Could not copy text: ', err);
