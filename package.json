@@ -1,19 +1,27 @@
 {
-  "name": "generatepasswords",
-  "version": "1.0.0",
-  "description": "password generator",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ThomasAndrewMacLean/generatePasswords.git"
-  },
-  "author": "Thomas MacLean <hello@thomasmaclean.be> (https://thomasmaclean.be)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ThomasAndrewMacLean/generatePasswords/issues"
-  },
-  "homepage": "https://github.com/ThomasAndrewMacLean/generatePasswords#readme"
+    "name": "generatepasswords",
+    "version": "1.0.0",
+    "description": "password generator",
+    "main": "index.js",
+    "scripts": {
+        "build": "browserify src/script.js -o dist/script.js",
+        "watch" : "npx watchify src/script.js -o dist/script.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ThomasAndrewMacLean/generatePasswords.git"
+    },
+    "author": "Thomas MacLean <hello@thomasmaclean.be> (https://thomasmaclean.be)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ThomasAndrewMacLean/generatePasswords/issues"
+    },
+    "homepage": "https://github.com/ThomasAndrewMacLean/generatePasswords#readme",
+    "dependencies": {
+        "badwords": "^1.0.0",
+        "superb": "^4.0.0"
+    },
+    "devDependencies": {
+        "browserify": "^16.5.0"
+    }
 }
