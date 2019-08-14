@@ -2,10 +2,15 @@ const superb = require('superb');
 const badwordsArray = require('badwords/array');
 const placeholder = document.getElementById('password');
 
+
+
 console.log('🚗 starting 🚀');
+
+const cleanerBadWords = badwordsArray.filter(bad => !bad.includes('ni'));
+
 const createPassword = () => {
   const badWord =
-    badwordsArray[Math.floor(Math.random() * badwordsArray.length)];
+    cleanerBadWords[Math.floor(Math.random() * cleanerBadWords.length)];
   const goodWord = superb.random();
 
   let password =
