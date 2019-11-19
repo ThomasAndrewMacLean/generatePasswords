@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "browserify src/script.js -o dist/script.js",
-        "watch" : "npx watchify src/script.js -o dist/script.js"
+        "watch": "npx watchify src/script.js -o dist/script.js"
     },
     "repository": {
         "type": "git",
@@ -19,6 +19,7 @@
     "homepage": "https://github.com/ThomasAndrewMacLean/generatePasswords#readme",
     "dependencies": {
         "badwords": "^1.0.0",
+        "fun-word-list": "^1.0.0",
         "superb": "^4.0.0"
     },
     "devDependencies": {

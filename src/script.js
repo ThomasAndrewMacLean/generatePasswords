@@ -1,16 +1,14 @@
 const superb = require('superb');
-const badwordsArray = require('badwords/array');
+//const badwordsArray = require('badwords/array');
 const placeholder = document.getElementById('password');
-
-
+var nouns = require('fun-word-list/lists/nouns');
 
 console.log('🚗 starting 🚀');
 
-const cleanerBadWords = badwordsArray.filter(bad => !bad.includes('ni'));
+//const cleanerBadWords = badwordsArray.filter(bad => !bad.includes('ni'));
 
 const createPassword = () => {
-  const badWord =
-    cleanerBadWords[Math.floor(Math.random() * cleanerBadWords.length)];
+  const badWord = nouns[Math.floor(Math.random() * nouns.length)][0];
   const goodWord = superb.random();
 
   let password =
