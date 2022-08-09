@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(#FFEE00, #33FFEE);
+    color: #333;
+    font-size: 16px;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inconsolata', monospace;
+}
+
+h1 {
+    color: darkred;
+    text-transform: capitalize;
+}
+
+.button-wrap {
+    width: 100%;
+    /* background: gray; */
+    display: flex;
+    justify-content: space-evenly
+}
+
+@media (max-width: 400px) {
+    .button-wrap {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    button {
+        margin: 1rem 0;
+    }
+}
+
+span {
+    font-size: 7vw;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    margin: 50px 0;
+    cursor: pointer;
+    text-align: center;
+    transition: border 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+span.copied {
+    border: 4px solid darkgreen;
+
+}
+
+button {
+    cursor: pointer;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 2px 1px darkgreen;
+    color: darkslategrey;
+}
+
+button:active {
+
+    box-shadow: none;
+    border: 4px solid darkgreen;
+
+}
+
+button:focus {
+    outline: none;
+    border: 4px solid rgba(0, 100, 0, 0.486);
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#FFEE00, #33FFEE);
+    width: 90vw;
+    min-width: 350px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+}
